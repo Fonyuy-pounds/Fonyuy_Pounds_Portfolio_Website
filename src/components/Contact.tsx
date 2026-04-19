@@ -6,6 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { MaskReveal } from '@/components/motion/MaskReveal'
 import { fadeUp, staggerContainer, viewportOnce } from '@/lib/animations'
 
@@ -96,26 +97,21 @@ export function Contact() {
       style={{ borderColor: 'var(--color-border)' }}
       aria-label="Contact"
     >
-      {/* ── Animated Dark Gradient Background ── */}
-      <motion.div
-        className="absolute inset-0 z-0 pointer-events-none opacity-100"
-        animate={{
-          backgroundPosition: ['0% 0%', '100% 100%', '0% 100%', '100% 0%', '0% 0%'],
-        }}
-        transition={{
-          repeat: Infinity,
-          duration: 30,
-          ease: 'linear',
-        }}
-        style={{
-          backgroundImage: `
-            radial-gradient(circle at center, rgba(40, 40, 40, 0.8) 0%, transparent 60%),
-            radial-gradient(circle at 80% 20%, rgba(201, 169, 110, 0.15) 0%, transparent 40%),
-            radial-gradient(circle at 20% 80%, rgba(201, 169, 110, 0.15) 0%, transparent 40%)
-          `,
-          backgroundSize: '200% 200%',
-        }}
-      />
+      {/* ── Dark Cinematic Background Image ── */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <Image
+          src="/contact-bg.png"
+          alt="Contact Section Background"
+          fill
+          className="object-cover opacity-60"
+          priority
+          sizes="100vw"
+        />
+        {/* Subtle gradient overlay to blend into the section above and below */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-[#0A0A0A]/50 to-[#0A0A0A]" />
+        {/* Additional dark overlay for consistent text readability */}
+        <div className="absolute inset-0 bg-black/60" />
+      </div>
       {/* Heavy blur removed, lighter overlay applied */}
       <div className="absolute inset-0 z-0 bg-bg/60 pointer-events-none" />
 
