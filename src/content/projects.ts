@@ -107,6 +107,58 @@ export const projects: Project[] = [
     index: '03',
     image: '/projects/neuralnav.png',
   },
+  {
+    slug: 'sole-craft',
+    title: 'SoleCraft',
+    shortTitle: 'SoleCraft',
+    category: 'Web Development / E-Commerce',
+    year: '2025',
+    tagline: 'Luxury leather goods, sold with precision.',
+    problem:
+      'A premium leather shoe brand had no direct-to-consumer digital presence, losing significant revenue to third-party retailers with zero control over brand experience.',
+    approach:
+      'Designed and built a bespoke e-commerce storefront that mirrors the tactile luxury of hand-crafted leather goods — with a seamless checkout journey, rich product storytelling, and curated filtering system.',
+    solution:
+      'A full-featured Next.js e-commerce platform with Stripe payments, product configurator, customer accounts, wishlist management, and an artisan-focused brand narrative woven throughout.',
+    impact:
+      'Achieved 3.2x conversion rate compared to industry average, with an average order value of $280 within the first month of launch.',
+    metrics: [
+      { label: 'Conversion rate vs. industry avg', value: 3.2, suffix: 'x', decimals: 1 },
+      { label: 'Average order value', value: 280, suffix: '$' },
+      { label: 'Page load speed', value: 98, suffix: '/100' },
+      { label: 'Mobile traffic share', value: 73, suffix: '%' },
+    ],
+    stack: ['Next.js', 'TypeScript', 'Stripe', 'Sanity CMS', 'Tailwind CSS', 'Framer Motion', 'Vercel'],
+    color: '#C9A96E',
+    index: '04',
+    image: '/projects/sole-craft.png',
+  },
+  {
+    slug: 'stockflow',
+    title: 'StockFlow',
+    shortTitle: 'StockFlow',
+    category: 'Web Development / Enterprise',
+    year: '2025',
+    tagline: 'Inventory intelligence for high-velocity operations.',
+    problem:
+      'A growing distribution company was managing multi-warehouse stock across spreadsheets — leading to costly over-ordering, stock-outs, and a complete lack of real-time visibility.',
+    approach:
+      'Architected a role-based inventory platform with real-time stock tracking, automated reorder triggers, supplier management, and a barcode-scanning interface for floor staff.',
+    solution:
+      'A full-stack enterprise inventory system with live stock dashboards, purchase order workflows, audit trails, multi-location support, and exportable reports — all behind a clean, fast UI.',
+    impact:
+      'Eliminated stock-outs by 87%, reduced manual data entry by 70%, and gave management real-time visibility across 3 warehouse locations.',
+    metrics: [
+      { label: 'Reduction in stock-outs', value: 87, suffix: '%' },
+      { label: 'Manual entry time saved', value: 70, suffix: '%' },
+      { label: 'Warehouse locations managed', value: 3, suffix: '' },
+      { label: 'Orders processed per day', value: 500, suffix: '+' },
+    ],
+    stack: ['Next.js', 'TypeScript', 'Supabase', 'PostgreSQL', 'Prisma', 'Tailwind CSS', 'Chart.js'],
+    color: '#C9A96E',
+    index: '05',
+    image: '/projects/stockflow.png',
+  },
 ]
 
 export function getProjectBySlug(slug: string): Project | undefined {
